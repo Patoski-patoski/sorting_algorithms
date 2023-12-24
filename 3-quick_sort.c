@@ -28,10 +28,11 @@ void swap(int *a, int *b)
 
 int partition(int arr[], int low, int high, size_t size)
 {
+	int j;
 	int pivot = arr[high];
 	int i = (low - 1);
 
-	for (int j = low; j <= high - 1; j++)
+	for (j = low; j <= high - 1; j++)
 	{
 		if (arr[j] < pivot)
 		{
