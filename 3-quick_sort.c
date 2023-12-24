@@ -21,6 +21,7 @@ void swap(int *a, int *b)
  *
  * @low: the low partition
  * @high: the upper partition
+ * @arr: an integer array
  * @size: size of the array
  *
  * Return: partition
@@ -50,8 +51,8 @@ int partition(int arr[], int low, int high, size_t size)
  * quickSort- a function that sorts an array of integers in ascending
  * order using the Quick sort algorithm
  *
- * @array: a pointer to integer
- * @low: lower boundary/partition 
+ * @arr: a pointer to integer
+ * @low: lower boundary/partition
  * @high: upper boundary/partition
  * @size: size of array
  *
@@ -68,6 +69,15 @@ void quickSort(int arr[], int low, int high, size_t size)
 		quickSort(arr, pi + 1, high, size);
 	}
 }
+
+/**
+ * quick_sort- a function to call quick sort
+ * @array: a pointer to integer
+ * @size: the size of array
+ *
+ * Return: Nothing
+ **/
+
 void quick_sort(int *array, size_t size)
 {
 	quickSort(array, 0, size - 1, size);
